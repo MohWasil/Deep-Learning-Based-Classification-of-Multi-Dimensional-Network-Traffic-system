@@ -1,7 +1,23 @@
-echo "env/" >> .gitignore
-echo "__pycache__/" >> .gitignore
-echo "*.pyc" >> .gitignore
-echo "*.pyo" >> .gitignore
-echo "*.pyd" >> .gitignore
-echo ".Python" >> .gitignore
-echo "*.sqlite3" >> .gitignore
+# Virtual environments
+env/
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Python settings
+.Python
+
+# Database files
+*.sqlite3
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE/editor settings
+.vscode/
+.idea/
