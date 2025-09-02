@@ -1,0 +1,18 @@
+			Testing the model:
+
+- cmd code to test the tensorflow serve model. right now binary is implemented.
+D:\Python_projects\Network-project>curl -d "@D:\Python_projects\Network-project\request.json" -H "Content-Type: application/json" -X POST http://localhost:8501/v1/models/binary_classifier:predict
+
+
+
+
+- Docker code to create a container image with tf-serving 
+used powershell
+docker run -p 8501:8501 --name tf_serving `
+>>   "--mount=type=bind,source=D:\Python_projects\Network-project,target=/models" `
+>>   -t tensorflow/serving:latest `
+>>   tensorflow_model_server --rest_api_port=8501 --model_config_file=/models/models.config
+
+
+
+

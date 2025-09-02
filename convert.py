@@ -7,4 +7,5 @@ def Model_convertor(model_path, path): # sending model and the path to save
     tf.saved_model.save(model, path) # saving the model as TensorFlow Serving
 
 
-Model_convertor("./Models/Full_data_LSTM_app.h5", "./app_classifier/attack_model/1")
+Model_convertor("./main_Models/Final-binary.h5", "./binary_classifier/binary_model/1")
+
