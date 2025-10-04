@@ -21,6 +21,8 @@ The work demonstrates how flow-based deep learning models, trained on CICIDS2017
 
 │ └── app_lstm_training.ipynb
 
+|
+
 ├── main_Models
 
 │ ├── binary.keras
@@ -69,7 +71,7 @@ The work demonstrates how flow-based deep learning models, trained on CICIDS2017
 
 │
 
-├── expected_features.json 
+├── requirements.txt 
 
 ├── measure_models_latency.py 
 
