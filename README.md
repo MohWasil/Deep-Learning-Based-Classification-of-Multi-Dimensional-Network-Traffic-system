@@ -10,7 +10,9 @@ The work demonstrates how flow-based deep learning models, trained on CICIDS2017
 
 ## 🔹 High-Level Architecture
 ### project-root
+
 │
+
 ├── notebooks/ # Model training notebooks
 
 │ ├── binary_cnn_training.ipynb
@@ -18,7 +20,9 @@ The work demonstrates how flow-based deep learning models, trained on CICIDS2017
 │ ├── attack_cnn_training.ipynb
 
 │ └── app_lstm_training.ipynb
+
 │
+
 ├── windows/ # Windows host files (model serving + UI)
 
 │ ├── tf_models/ # TensorFlow SavedModel directories
@@ -28,7 +32,9 @@ The work demonstrates how flow-based deep learning models, trained on CICIDS2017
 │ │ ├── attack_classifier/1/
 
 │ │ └── app_classifier/1/
+
 │ │
+
 │ ├── dashboard.py # Gradio real-time monitoring UI
 
 │ ├── models.config # TF-Serving multi-model config (if used)
@@ -36,7 +42,9 @@ The work demonstrates how flow-based deep learning models, trained on CICIDS2017
 │ ├── Dockerfile / scripts # Docker TF-Serving launch configs
 
 │ └── README.md # Instructions for Windows setup
+
 │
+
 ├── ubuntu/ # Ubuntu VM files (data plane + control)
 
 │ ├── preprocess.py # Main pipeline (Zeek → imputer → scaler → TF-Serving)
@@ -54,7 +62,11 @@ The work demonstrates how flow-based deep learning models, trained on CICIDS2017
 │ ├── classified.csv # Output log of classifications
 
 │ └── README.md # Instructions for Ubuntu setup
+
 │
+
 ├── expected_features.json # Ordered list of features used by all models
+
 ├── latency_log.csv # (Optional) Collected latency results
+
 ├── README.md # This general overview file
