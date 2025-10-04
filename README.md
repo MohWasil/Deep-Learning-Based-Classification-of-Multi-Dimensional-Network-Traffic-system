@@ -13,7 +13,7 @@ The work demonstrates how flow-based deep learning models, trained on CICIDS2017
 
 │
 
-├── notebooks/ # Model training notebooks
+├── notebooks/ 
 
 │ ├── binary_cnn_training.ipynb
 
@@ -21,11 +21,19 @@ The work demonstrates how flow-based deep learning models, trained on CICIDS2017
 
 │ └── app_lstm_training.ipynb
 
-│
+├── main_Models
 
-├── windows/ # Windows host files (model serving + UI)
+│ ├── binary.keras
 
-│ ├── tf_models/ # TensorFlow SavedModel directories
+│ ├── attack_type.keras
+
+│ └── app_type.keras
+
+|
+
+├── windows/ 
+
+│ ├── tf_models/ 
 
 │ │ ├── binary_classifier/1/
 
@@ -37,36 +45,32 @@ The work demonstrates how flow-based deep learning models, trained on CICIDS2017
 
 │ ├── dashboard.py # Gradio real-time monitoring UI
 
-│ ├── models.config # TF-Serving multi-model config (if used)
+│ ├── models.config 
 
 │ ├── Dockerfile / scripts # Docker TF-Serving launch configs
 
-│ └── README.md # Instructions for Windows setup
-
 │
 
-├── ubuntu/ # Ubuntu VM files (data plane + control)
+├── ubuntu/ 
 
 │ ├── preprocess.py # Main pipeline (Zeek → imputer → scaler → TF-Serving)
 
 │ ├── feature_fill.py # Math-based feature approximation module
 
-│ ├── imputers.pkl # Trained imputer models (offline)
+│ ├── imputers.pkl 
 
-│ ├── scaler_pipeline.joblib# RobustScaler for features
+│ ├── scaler_pipeline.joblib
 
 │ ├── service.py # FastAPI server exposing /latest endpoint
 
-│ ├── ml_sdn_firewall.py # Ryu SDN controller logic for enforcement
+│ ├── ml_sdn_firewall.py 
 
-│ ├── classified.csv # Output log of classifications
-
-│ └── README.md # Instructions for Ubuntu setup
+│ ├── classified.csv 
 
 │
 
-├── expected_features.json # Ordered list of features used by all models
+├── expected_features.json 
 
-├── latency_log.csv # (Optional) Collected latency results
+├── measure_models_latency.py 
 
-├── README.md # This general overview file
+├── README.md 
