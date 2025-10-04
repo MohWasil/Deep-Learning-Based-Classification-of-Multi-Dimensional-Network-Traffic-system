@@ -1,0 +1,1 @@
+{"ts":1757327681089,"uid":"CUNHrjAPmw9UqjQH9","id.orig_h":"fe80::54ff:66ff:feab:5967","id.orig_p":5353,"id.resp_h":"ff02::fb","id.resp_p":5353,"name":"bad_UDP_checksum","notice":false,"peer":"zeek","source":"UDP"}
