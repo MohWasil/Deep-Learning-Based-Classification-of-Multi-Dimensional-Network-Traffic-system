@@ -12,29 +12,47 @@ The work demonstrates how flow-based deep learning models, trained on CICIDS2017
 ### project-root
 │
 ├── notebooks/ # Model training notebooks
+
 │ ├── binary_cnn_training.ipynb
+
 │ ├── attack_cnn_training.ipynb
+
 │ └── app_lstm_training.ipynb
 │
 ├── windows/ # Windows host files (model serving + UI)
+
 │ ├── tf_models/ # TensorFlow SavedModel directories
+
 │ │ ├── binary_classifier/1/
+
 │ │ ├── attack_classifier/1/
+
 │ │ └── app_classifier/1/
 │ │
 │ ├── dashboard.py # Gradio real-time monitoring UI
+
 │ ├── models.config # TF-Serving multi-model config (if used)
+
 │ ├── Dockerfile / scripts # Docker TF-Serving launch configs
+
 │ └── README.md # Instructions for Windows setup
 │
 ├── ubuntu/ # Ubuntu VM files (data plane + control)
+
 │ ├── preprocess.py # Main pipeline (Zeek → imputer → scaler → TF-Serving)
+
 │ ├── feature_fill.py # Math-based feature approximation module
+
 │ ├── imputers.pkl # Trained imputer models (offline)
+
 │ ├── scaler_pipeline.joblib# RobustScaler for features
+
 │ ├── service.py # FastAPI server exposing /latest endpoint
+
 │ ├── ml_sdn_firewall.py # Ryu SDN controller logic for enforcement
+
 │ ├── classified.csv # Output log of classifications
+
 │ └── README.md # Instructions for Ubuntu setup
 │
 ├── expected_features.json # Ordered list of features used by all models
